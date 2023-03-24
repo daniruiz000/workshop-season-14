@@ -8,22 +8,22 @@ const Header = ({ setMessages }) => {
       <div>
         <h2>
           {' '}
-          <FormattedMessage id="header.logo" />
+          <FormattedMessage id='header.logo' />
         </h2>
         <Link to={'/'}>
-          <FormattedMessage id="header.home" />
+          <FormattedMessage id='header.home' />
         </Link>
         <Link to={'/users'}>
-          <FormattedMessage id="header.users" />
+          <FormattedMessage id='header.users' />
         </Link>
         <Link to={'/create-user'}>
-          <FormattedMessage id="header.createUser" />
+          <FormattedMessage id='header.createUser' />
         </Link>
         <button onClick={() => setMessages(Spanish)}>
-          <FormattedMessage id="header.spanish" />
+          <FormattedMessage id='header.spanish' />
         </button>
         <button onClick={() => setMessages(English)}>
-          <FormattedMessage id="header.english" />
+          <FormattedMessage id='header.english' />
         </button>
       </div>
     </nav>
