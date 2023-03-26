@@ -7,7 +7,7 @@ import CreateUser from './Components/CreateUser/CreateUser';
 import Spanish from './lang/es.json';
 import English from './lang/en.json';
 import { IntlProvider } from 'react-intl';
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 const locale = navigator.language;
 let defaultMessages;
@@ -31,18 +31,18 @@ function App() {
   const [messages, setMessages] = React.useState(defaultMessages);
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       <IntlProvider locale={locale} messages={messages}>
         <div className='App'>
-          <Header setMessages={setMessages} />
+          <Header setMessages={setMessages}/>
         </div>
         <Routes>
-          <Route path='/' element={<HomePage />}></Route>
-          <Route path='/users' element={<UserList />}></Route>
-          <Route path='/create-user' element={<CreateUser />}></Route>
+          <Route path='/' element={<HomePage/>}></Route>
+          <Route path='/users' element={<UserList/>}></Route>
+          <Route path='/create-user' element={<CreateUser/>}></Route>
         </Routes>
       </IntlProvider>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
