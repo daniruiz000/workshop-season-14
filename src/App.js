@@ -27,6 +27,7 @@ switch (locale) {
 
     break;
 }
+
 function App() {
   const [messages, setMessages] = React.useState(defaultMessages);
 
@@ -34,12 +35,12 @@ function App() {
     <BrowserRouter>
       <IntlProvider locale={locale} messages={messages}>
         <div className='App'>
-          <Header setMessages={setMessages}/>
+          <Header setMessages={setMessages} />
         </div>
         <Routes>
-          <Route path='/' element={<HomePage/>}></Route>
-          <Route path='/users' element={<UserList/>}></Route>
-          <Route path='/create-user' element={<CreateUser/>}></Route>
+          <Route path='/' element={<HomePage />}></Route>
+          <Route path='/users' element={<UserList />}></Route>
+          <Route path='/create-user' element={<CreateUser />}></Route>
         </Routes>
       </IntlProvider>
     </BrowserRouter>
